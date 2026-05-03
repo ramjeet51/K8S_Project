@@ -123,8 +123,22 @@ export default function TasksPage() {
 
         {/* Nav */}
         <Navbar title="Task Manager" backTo="/dashboard" />
+        {/* Action Buttons */}
+        <div className="fixed top-16 left-0 right-0 z-40 flex items-center justify-end gap-3 px-6 py-3"
+          style={{ background: "rgba(7,7,16,0.85)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+          <input value={search} onChange={e => setSearch(e.target.value)}
+            placeholder="Search tasks..." className="gold-input px-3 py-1.5 text-sm w-48" />
+          <button onClick={() => setShowProjectModal(true)}
+            className="px-4 py-2 text-sm rounded-xl transition-all"
+            style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#9090b0" }}>
+            + Project
+          </button>
+          <button onClick={() => setShowModal(true)} className="gold-btn px-4 py-2 text-sm">
+            + New Task
+          </button>
+        </div>
 
-        <div className="max-w-7xl mx-auto px-6 pt-24 pb-12">
+        <div className="max-w-7xl mx-auto px-6 pt-36 pb-12">
 
           {/* Projects Bar */}
           {projects.length > 0 && (

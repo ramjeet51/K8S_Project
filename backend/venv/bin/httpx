@@ -1,4 +1,4 @@
-#!/home/ramjeet/lumina-full-project_backup/backend/venv/bin/python3
+#!/home/ramjeet/lumina-full-project_backup/K8S_Project/backend/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
